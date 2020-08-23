@@ -6,7 +6,7 @@ import threading
 import sqlite3
 import requests
 
-TOKEN = "BBFF-WLBvoPc3VK6bgkI5haAR4R4VvBOapc"  
+TOKEN = "xxxxxxxx"  # Coloque seu token do Ubidots
 DEVICE_LABEL = "RaspBerry"  
 VARIABLE_LABEL_1 = "Ligth"  
 VARIABLE_LABEL_2 = "TESTE"  
@@ -87,11 +87,11 @@ create_tables()
 def main():
     
     # GPIOs Setup
-    pir_sensor = 24;
-    ligth = 23;
-    gpio.setmode(gpio.BCM);
-    gpio.setup(ligth, gpio.OUT);
-    gpio.setup(pir_sensor, gpio.IN);
+    pir_sensor = 24
+    ligth = 23
+    gpio.setmode(gpio.BCM)
+    gpio.setup(ligth, gpio.OUT)
+    gpio.setup(pir_sensor, gpio.IN)
     
    
     
@@ -140,10 +140,10 @@ def build_payload(variable_1, variable_2, variable_3):
     global liga
     li = liga
     if li == 1:
-        #print("Pi")
+      
         value_1 = 1
     else:
-        #print("MyBAD")
+        
         value_1 = 0
     
     value_2 = 2
